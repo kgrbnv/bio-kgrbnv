@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 
 type Tab = 'personal' | 'business'
+type Locale = 'ru' | 'en'
 
 // SVG Icons
 const Icons = {
@@ -50,6 +51,7 @@ interface LinkItem {
   subtitle?: string
   url: string
   isLogo?: boolean
+  logoSrc?: string
 }
 
 const personalLinks: LinkItem[] = [
@@ -112,15 +114,73 @@ const businessLinks: LinkItem[] = [
     url: 'https://ru.sfer.ai/teams?utm_source=pr&utm_medium=ig&utm_campaign=biolinkgrbnv',
     isLogo: true,
   },
+  {
+    icon: null,
+    title: 'ФТЭП',
+    subtitle: '10+ лет разрабатываем финтех стратегии для банков и стартапов по всему миру',
+    url: 'https://ftep.ru',
+    isLogo: true,
+    logoSrc: '/ftep-logo.svg',
+  },
+]
+
+const englishLinks: LinkItem[] = [
+  {
+    icon: Icons.calendar,
+    title: 'Schedule a call',
+    subtitle: 'Discuss your project in AI or FinTech',
+    url: 'https://calendly.com/gurbanov/sfer-intro',
+  },
+  {
+    icon: Icons.whatsapp,
+    title: 'WhatsApp',
+    url: 'https://wa.me/351916116466',
+  },
+  {
+    icon: null,
+    title: 'sfer.ai',
+    subtitle: 'AI transformation through training and implementation',
+    url: 'https://sfer.ai/teams',
+    isLogo: true,
+  },
+  {
+    icon: null,
+    title: 'FT Board',
+    subtitle: 'Boutique FinTech Consulting: 10+ years of FinTech strategies for banks and startups worldwide',
+    url: 'https://ftboard.com',
+    isLogo: true,
+    logoSrc: '/ftboard-logo.svg',
+  },
+  {
+    icon: Icons.linkedin,
+    title: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/kgurbanov',
+  },
+  {
+    icon: Icons.user,
+    title: 'About me',
+    url: 'https://kgrbnv.com',
+  },
 ]
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<Tab>('personal')
+  const [locale, setLocale] = useState<Locale>('ru')
 
-  const links = activeTab === 'personal' ? personalLinks : businessLinks
+  const links = locale === 'en'
+    ? englishLinks
+    : (activeTab === 'personal' ? personalLinks : businessLinks)
 
   return (
-    <main className="min-h-screen flex flex-col items-center px-4 py-12">
+    <main className="min-h-screen flex flex-col items-center px-4 py-12 relative">
+      {/* Language Switcher */}
+      <button
+        onClick={() => setLocale(locale === 'ru' ? 'en' : 'ru')}
+        className="absolute top-4 right-4 glass-card px-3 py-1.5 rounded-full text-sm font-medium text-zinc-300 hover:text-white transition-colors"
+      >
+        {locale === 'ru' ? 'EN' : 'RU'}
+      </button>
+
       <div className="w-full max-w-md">
         {/* Avatar */}
         <div className="flex justify-center mb-6">
@@ -140,33 +200,39 @@ export default function Home() {
 
         {/* Name & Bio */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-semibold mb-3">Кирилл Гурбанов</h1>
+          <h1 className="text-2xl font-semibold mb-3">
+            {locale === 'en' ? 'Kirill Gurbanov' : 'Кирилл Гурбанов'}
+          </h1>
           <p className="text-zinc-400 text-sm leading-relaxed px-2">
-            Основатель sfer.ai, практик с 10-летним опытом на топ-позициях в крупнейших компаниях России: со-основатель банка СМЛТ (группа «Самолет»), Chief Digital Officer МТС Банк, CPO Сбер Бизнес Мобайл и др.
+            {locale === 'en'
+              ? 'CEO, Founder @ sfer.ai and FT Board, AI Enthusiast, Seasoned Executive in FinTech & Banking, PropTech. Global Talent UK.'
+              : 'Основатель sfer.ai, практик с 10-летним опытом на топ-позициях в крупнейших компаниях России: со-основатель банка СМЛТ (группа «Самолет»), Chief Digital Officer МТС Банк, CPO Сбер Бизнес Мобайл и др.'}
           </p>
         </div>
 
-        {/* Tab Selector */}
-        <div className="flex justify-center mb-8">
-          <div className="glass-card rounded-full p-1 flex gap-1">
-            <button
-              onClick={() => setActiveTab('personal')}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeTab === 'personal' ? 'tab-active' : 'tab-inactive'
-              }`}
-            >
-              Частным лицам
-            </button>
-            <button
-              onClick={() => setActiveTab('business')}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeTab === 'business' ? 'tab-active' : 'tab-inactive'
-              }`}
-            >
-              Бизнесу
-            </button>
+        {/* Tab Selector - only for Russian version */}
+        {locale === 'ru' && (
+          <div className="flex justify-center mb-8">
+            <div className="glass-card rounded-full p-1 flex gap-1">
+              <button
+                onClick={() => setActiveTab('personal')}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeTab === 'personal' ? 'tab-active' : 'tab-inactive'
+                }`}
+              >
+                Частным лицам
+              </button>
+              <button
+                onClick={() => setActiveTab('business')}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeTab === 'business' ? 'tab-active' : 'tab-inactive'
+                }`}
+              >
+                Бизнесу
+              </button>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Links */}
         <div className="space-y-3">
@@ -181,8 +247,8 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 {link.isLogo ? (
                   <Image
-                    src="/sfer-logo.png"
-                    alt="sfer.ai"
+                    src={link.logoSrc || '/sfer-logo.png'}
+                    alt={link.title}
                     width={24}
                     height={24}
                     className="w-6 h-6 object-contain"
@@ -219,7 +285,7 @@ export default function Home() {
         {/* Footer */}
         <div className="mt-12 text-center">
           <p className="text-zinc-600 text-xs">
-            © {new Date().getFullYear()} Кирилл Гурбанов
+            © {new Date().getFullYear()} {locale === 'en' ? 'Kirill Gurbanov' : 'Кирилл Гурбанов'}
           </p>
         </div>
       </div>
