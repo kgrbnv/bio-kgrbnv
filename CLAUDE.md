@@ -1,6 +1,11 @@
 # bio.kgrbnv.com
 
-Link-in-bio страница для Instagram.
+Link-in-bio страница для Instagram Кирилла Гурбанова.
+
+## Ссылки
+- **Продакшен**: https://bio.kgrbnv.com
+- **GitHub**: https://github.com/kgrbnv/bio-kgrbnv
+- **Vercel**: https://vercel.com/kirillgurbanov-gmailcom/bio-kgrbnv
 
 ## Стек
 - Next.js 14 (App Router)
@@ -16,30 +21,60 @@ npm run build  # продакшен сборка
 npm run lint   # линтер
 ```
 
-## Структура
-- `src/app/page.tsx` — главная страница
-- `src/app/layout.tsx` — корневой layout + метаданные
-- `src/app/globals.css` — глобальные стили
-- `src/components/` — UI-компоненты
-- `public/avatar.webp` — фото профиля
+## Структура проекта
+```
+bio.kgrbnv.com/
+├── public/
+│   ├── avatar.png       # Фото профиля (круглое)
+│   └── sfer-logo.png    # Логотип sfer.ai
+├── src/app/
+│   ├── page.tsx         # Главная страница
+│   ├── layout.tsx       # Корневой layout + SEO метаданные
+│   └── globals.css      # Глобальные стили + Tailwind
+├── CLAUDE.md            # Этот файл
+├── package.json
+├── tailwind.config.ts
+└── next.config.js
+```
 
 ## Дизайн
 - Тёмная тема (`#0a0a0b`)
 - Акцент: градиент indigo→violet (`#6366f1` → `#8b5cf6`)
 - Glassmorphism карточки с `backdrop-blur`
 - Pill-toggle переключатель аудитории
+- SVG иконки (Telegram, WhatsApp, Calendar и др.)
 
 ## Контент
-Страница имеет два режима:
-1. **Частным лицам** — воркшопы, телеграм-каналы, личные контакты
-2. **Бизнесу** — звонки через Calendly, WhatsApp, Telegram, sfer.ai
+Страница имеет два режима (переключатель):
+
+### Частным лицам
+1. Воркшоп "База ИИ" → ru.sfer.ai/baza
+2. Телеграм-канал (10.3К) → t.me/kgrbnv
+3. Канал про ИИ (2.5К) → t.me/ailetter
+4. Написать мне → t.me/kgurbanov
+5. Обо мне → gurbanov.ru
+
+### Бизнесу
+1. Назначить звонок → calendly.com/gurbanov/sfer-intro
+2. WhatsApp → wa.me/79263814177
+3. Telegram → t.me/kgurbanov
+4. sfer.ai → ru.sfer.ai/teams
 
 ## Деплой
-Автоматический через Vercel при push в main.
-Домен: bio.kgrbnv.com
+Автоматический через Vercel при push в `main` ветку.
 
-### Настройка домена
-В DNS добавить CNAME запись:
+### Домен
+DNS запись (уже настроена):
 ```
-bio → cname.vercel-dns.com
+Тип:     CNAME
+Имя:     bio
+Значение: cname.vercel-dns.com
 ```
+
+## Git
+```bash
+git add .
+git commit -m "описание изменений"
+git push
+```
+После push Vercel автоматически задеплоит изменения.
