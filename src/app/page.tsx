@@ -53,13 +53,13 @@ const personalLinks: LinkItem[] = [
   {
     icon: Icons.telegram,
     title: 'Телеграм-канал',
-    subtitle: '10.3К подписчиков',
+    subtitle: '14.7К подписчиков',
     url: 'https://t.me/kgrbnv',
   },
   {
     icon: Icons.telegram,
     title: 'Канал про ИИ',
-    subtitle: '2.5К подписчиков',
+    subtitle: '3.3К подписчиков',
     url: 'https://t.me/ailetter',
   },
   {
