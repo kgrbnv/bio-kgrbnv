@@ -84,7 +84,7 @@ const businessLinks: LinkItem[] = [
     icon: Icons.calendar,
     title: 'Назначить звонок',
     subtitle: 'Обсудить вашу задачу',
-    url: 'https://calendly.com/gurbanov/sfer-intro',
+    url: 'https://calendly.com/gurbanov/sfer-ai-30',
   },
   {
     icon: Icons.whatsapp,
@@ -118,7 +118,7 @@ const englishLinks: LinkItem[] = [
     icon: Icons.calendar,
     title: 'Schedule a call',
     subtitle: 'Discuss your project in AI or FinTech',
-    url: 'https://calendly.com/gurbanov/sfer-intro',
+    url: 'https://calendly.com/gurbanov/sfer-ai-30',
   },
   {
     icon: Icons.whatsapp,
@@ -227,7 +227,7 @@ export default function Home() {
         <div className="space-y-3">
           {links.map((link, index) => (
             <a
-              key={index}
+              key={`${locale}-${activeTab}-${index}`}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
