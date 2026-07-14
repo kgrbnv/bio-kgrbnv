@@ -102,7 +102,7 @@ const ruBusinessLinks: LinkItem[] = [
     icon: null,
     title: 'sfer.ai',
     subtitle: 'AI-трансформация через обучение и внедрение',
-    url: 'https://ru.sfer.ai/teams?utm_source=pr&utm_medium=ig&utm_campaign=biolinkgrbnv',
+    url: 'https://ru.sfer.ai/?utm_source=pr&utm_medium=ig&utm_campaign=biolinkgrbnv',
     isLogo: true,
   },
   {
@@ -132,7 +132,7 @@ const enPersonalLinks: LinkItem[] = [
     icon: null,
     title: 'sfer.ai',
     subtitle: 'AI transformation through training and implementation',
-    url: 'https://sfer.ai/teams',
+    url: 'https://en.sfer.ai/',
     isLogo: true,
   },
   {
@@ -161,7 +161,7 @@ const enBusinessLinks: LinkItem[] = [
     icon: null,
     title: 'sfer.ai',
     subtitle: 'AI transformation through training and implementation',
-    url: 'https://sfer.ai/teams',
+    url: 'https://en.sfer.ai/',
     isLogo: true,
   },
   {
