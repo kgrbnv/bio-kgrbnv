@@ -63,18 +63,18 @@ const ruPersonalLinks: LinkItem[] = [
     icon: Icons.telegram,
     title: 'Телеграм-канал',
     subtitle: '16.5К подписчиков',
-    url: 'https://t.me/kgrbnv',
+    url: 'https://telegram.me/+wWWpIR-3xnJjYTdi',
   },
   {
     icon: Icons.telegram,
     title: 'Канал про ИИ',
     subtitle: '4.5К подписчиков',
-    url: 'https://t.me/ailetter',
+    url: 'https://telegram.me/+S5flPh8BiCsxNjcy',
   },
   {
     icon: Icons.telegram,
     title: 'Написать мне',
-    url: 'https://t.me/kirill1',
+    url: 'https://telegram.me/kirill1',
   },
   {
     icon: Icons.user,
@@ -103,7 +103,7 @@ const ruBusinessLinks: LinkItem[] = [
   {
     icon: Icons.telegram,
     title: 'Написать в Telegram',
-    url: 'https://t.me/kirill1',
+    url: 'https://telegram.me/kirill1',
   },
   {
     icon: null,
