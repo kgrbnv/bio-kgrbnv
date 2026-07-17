@@ -53,6 +53,13 @@ interface LinkItem {
 
 const ruPersonalLinks: LinkItem[] = [
   {
+    icon: null,
+    title: 'sfer.ai',
+    subtitle: 'AI-трансформация через обучение и внедрение',
+    url: 'https://ru.sfer.ai/?utm_source=pr&utm_medium=ig&utm_campaign=biolinkgrbnv',
+    isLogo: true,
+  },
+  {
     icon: Icons.telegram,
     title: 'Телеграм-канал',
     subtitle: '16.5К подписчиков',
