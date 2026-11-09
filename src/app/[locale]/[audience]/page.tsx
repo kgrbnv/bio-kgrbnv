@@ -38,6 +38,11 @@ const Icons = {
       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
     </svg>
   ),
+  globe: (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+    </svg>
+  ),
 }
 
 interface LinkItem {
@@ -54,21 +59,21 @@ interface LinkItem {
 const ruPersonalLinks: LinkItem[] = [
   {
     icon: null,
-    title: 'sfer.ai',
+    title: 'Метастабильность',
     subtitle: 'AI-трансформация через обучение и внедрение',
-    url: 'https://ru.sfer.ai/?utm_source=pr&utm_medium=ig&utm_campaign=biolinkgrbnv',
+    url: 'https://metastabilnost.ru/?utm_source=pr&utm_medium=ig&utm_campaign=biolinkgrbnv',
     isLogo: true,
   },
   {
     icon: Icons.telegram,
     title: 'Телеграм-канал',
-    subtitle: '16.5К подписчиков',
+    subtitle: '20К подписчиков',
     url: 'https://telegram.me/+wWWpIR-3xnJjYTdi',
   },
   {
     icon: Icons.telegram,
     title: 'Канал про ИИ',
-    subtitle: '4.5К подписчиков',
+    subtitle: '5К подписчиков',
     url: 'https://telegram.me/+S5flPh8BiCsxNjcy',
   },
   {
@@ -107,18 +112,10 @@ const ruBusinessLinks: LinkItem[] = [
   },
   {
     icon: null,
-    title: 'sfer.ai',
+    title: 'Метастабильность',
     subtitle: 'AI-трансформация через обучение и внедрение',
-    url: 'https://ru.sfer.ai/?utm_source=pr&utm_medium=ig&utm_campaign=biolinkgrbnv',
+    url: 'https://metastabilnost.ru/?utm_source=pr&utm_medium=ig&utm_campaign=biolinkgrbnv',
     isLogo: true,
-  },
-  {
-    icon: null,
-    title: 'ФТЭП',
-    subtitle: '10+ лет разрабатываем финтех стратегии для банков и стартапов по всему миру',
-    url: 'https://ftep.ru',
-    isLogo: true,
-    logoSrc: '/ftep-logo.svg',
   },
 ]
 
@@ -136,19 +133,10 @@ const enPersonalLinks: LinkItem[] = [
     url: 'https://kgrbnv.com',
   },
   {
-    icon: null,
-    title: 'sfer.ai',
+    icon: Icons.globe,
+    title: 'Future as Usual',
     subtitle: 'AI transformation through training and implementation',
     url: 'https://en.sfer.ai/',
-    isLogo: true,
-  },
-  {
-    icon: null,
-    title: 'FT Board',
-    subtitle: 'Boutique FinTech Consulting',
-    url: 'https://ftboard.com',
-    isLogo: true,
-    logoSrc: '/ftboard-logo.svg',
   },
 ]
 
@@ -165,19 +153,10 @@ const enBusinessLinks: LinkItem[] = [
     url: 'https://wa.me/351916116466',
   },
   {
-    icon: null,
-    title: 'sfer.ai',
+    icon: Icons.globe,
+    title: 'Future as Usual',
     subtitle: 'AI transformation through training and implementation',
     url: 'https://en.sfer.ai/',
-    isLogo: true,
-  },
-  {
-    icon: null,
-    title: 'FT Board',
-    subtitle: 'Boutique FinTech Consulting: 10+ years of FinTech strategies for banks and startups worldwide',
-    url: 'https://ftboard.com',
-    isLogo: true,
-    logoSrc: '/ftboard-logo.svg',
   },
   {
     icon: Icons.linkedin,
@@ -219,13 +198,13 @@ export function generateMetadata({ params }: { params: { locale: string; audienc
   return {
     title: isEn ? 'Kirill Gurbanov — links' : 'Кирилл Гурбанов — ссылки',
     description: isEn
-      ? 'Founder of sfer.ai. 10+ years in executive management. AI & FinTech.'
-      : 'Основатель sfer.ai. 10+ лет в топ-менеджменте. Воркшопы по ИИ, телеграм-каналы и контакты.',
+      ? 'Founder of Future as Usual. 10+ years in executive management. AI & FinTech.'
+      : 'Основатель Метастабильности. 10+ лет в топ-менеджменте. Воркшопы по ИИ, телеграм-каналы и контакты.',
     openGraph: {
       title: isEn ? 'Kirill Gurbanov — links' : 'Кирилл Гурбанов — ссылки',
       description: isEn
-        ? 'Founder of sfer.ai. 10+ years in executive management.'
-        : 'Основатель sfer.ai. 10+ лет в топ-менеджменте.',
+        ? 'Founder of Future as Usual. 10+ years in executive management.'
+        : 'Основатель Метастабильности. 10+ лет в топ-менеджменте.',
       url: 'https://bio.kgrbnv.com',
       siteName: isEn ? 'Kirill Gurbanov' : 'Кирилл Гурбанов',
       locale: isEn ? 'en_US' : 'ru_RU',
@@ -235,8 +214,8 @@ export function generateMetadata({ params }: { params: { locale: string; audienc
       card: 'summary',
       title: isEn ? 'Kirill Gurbanov — links' : 'Кирилл Гурбанов — ссылки',
       description: isEn
-        ? 'Founder of sfer.ai. 10+ years in executive management.'
-        : 'Основатель sfer.ai. 10+ лет в топ-менеджменте.',
+        ? 'Founder of Future as Usual. 10+ years in executive management.'
+        : 'Основатель Метастабильности. 10+ лет в топ-менеджменте.',
     },
   }
 }
@@ -286,10 +265,10 @@ export default function Page({ params }: { params: { locale: string; audience: s
           <h1 className="text-2xl font-semibold mb-3">
             {locale === 'en' ? 'Kirill Gurbanov' : 'Кирилл Гурбанов'}
           </h1>
-          <p className="text-zinc-400 text-sm leading-relaxed px-2">
+          <p className="text-zinc-400 text-sm leading-relaxed px-2 text-balance">
             {locale === 'en'
-              ? 'CEO, Founder @ sfer.ai and FT Board, AI Enthusiast, Seasoned Executive in FinTech & Banking, PropTech. Global Talent UK.'
-              : 'Основатель sfer.ai, практик с 10-летним опытом на топ-позициях в крупнейших компаниях России: со-основатель банка СМЛТ (группа «Самолет»), Chief Digital Officer МТС Банк, CPO Сбер Бизнес Мобайл и др.'}
+              ? 'CEO, Founder @ Future as Usual, AI Enthusiast, Seasoned Executive in FinTech & Banking, PropTech.'
+              : 'Основатель Метастабильности, практик с\u00A010\u2011летним опытом на топ\u2011позициях в крупнейших компаниях России: со\u2011основатель банка СМЛТ (группа «Самолет»), Chief Digital Officer МТС Банк, CPO Сбер Бизнес Мобайл и\u00A0др.'}
           </p>
         </div>
 
@@ -328,7 +307,7 @@ export default function Page({ params }: { params: { locale: string; audience: s
               <div className="flex items-center gap-4">
                 {link.isLogo ? (
                   <Image
-                    src={link.logoSrc || '/sfer-logo.png'}
+                    src={link.logoSrc || '/metastabilnost-logo.svg'}
                     alt={link.title}
                     width={24}
                     height={24}
