@@ -136,7 +136,7 @@ const enPersonalLinks: LinkItem[] = [
     icon: Icons.globe,
     title: 'Future as Usual',
     subtitle: 'AI transformation through training and implementation',
-    url: 'https://en.sfer.ai/',
+    url: 'https://futureasusual.com',
   },
 ]
 
@@ -156,7 +156,7 @@ const enBusinessLinks: LinkItem[] = [
     icon: Icons.globe,
     title: 'Future as Usual',
     subtitle: 'AI transformation through training and implementation',
-    url: 'https://en.sfer.ai/',
+    url: 'https://futureasusual.com',
   },
   {
     icon: Icons.linkedin,

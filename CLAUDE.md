@@ -45,8 +45,9 @@ src/
 ## Бренды (с 09.11.2026)
 - Компания в России — **Метастабильность** (бывшая sfer.ai), сайт https://metastabilnost.ru
   (ru.sfer.ai редиректит туда). В тексте склоняется без кавычек: «Основатель Метастабильности».
-- За пределами России — **Future as Usual**. Своего сайта и утверждённого логотипа пока нет:
-  карточка ведёт на https://en.sfer.ai/, вместо логотипа — иконка глобуса.
+- За пределами России — **Future as Usual**, сайт https://futureasusual.com (решение Кирилла
+  11.11.2026; на старый английский сайт sfer.ai и en.sfer.ai английская версия больше не ссылается).
+  Утверждённого логотипа пока нет: вместо логотипа — иконка глобуса.
 - Знак Метастабильности в английской версии не используется.
 - Знак Метастабильности — из брендбука, в экспорте с сайта: https://metastabilnost.ru/brand/metastability-sign.svg;
   цвета заменены на белый, как в инверсной версии логотипа (`/brand/metastability-logo-inverse.svg`).
@@ -71,12 +72,12 @@ src/
 ### EN — Personal
 1. LinkedIn
 2. About me → kgrbnv.com
-3. Future as Usual → en.sfer.ai
+3. Future as Usual → futureasusual.com
 
 ### EN — Business
 1. Schedule a call → calendly.com/gurbanov/sfer-ai-30
 2. WhatsApp → wa.me/351916116466
-3. Future as Usual → en.sfer.ai
+3. Future as Usual → futureasusual.com
 4. LinkedIn
 5. About me → kgrbnv.com
 
